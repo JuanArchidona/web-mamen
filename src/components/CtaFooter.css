@@ -1,0 +1,79 @@
+.cta-footer {
+    position: relative;
+    background:
+        radial-gradient(ellipse at 50% 80%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse at 20% 20%, rgba(180, 100, 30, 0.1) 0%, transparent 50%),
+        linear-gradient(160deg, #1e1408 0%, #120d05 50%, #080503 100%);
+    background-attachment: fixed;
+    padding: 120px 20px;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(30, 20, 10, 0.78), rgba(20, 12, 5, 0.88));
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.cta-eyebrow {
+    display: inline-block;
+    color: var(--col-gold-light);
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    opacity: 0.85;
+}
+
+.cta-footer h2 {
+    color: white;
+    margin-bottom: 18px;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.cta-footer p {
+    font-size: 1.15rem;
+    margin-bottom: 36px;
+    opacity: 0.85;
+}
+
+.cta-btn {
+    font-size: 1rem;
+    padding: 18px 52px;
+}
+
+.cta-meta {
+    margin-top: 28px;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    opacity: 0.65;
+    font-size: 0.88rem;
+}
+
+.cta-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cta-meta i {
+    color: var(--col-gold-light);
+}
+
+@media (max-width: 768px) {
+    .cta-footer {
+        background-attachment: scroll;
+        padding: 80px 20px;
+    }
+}

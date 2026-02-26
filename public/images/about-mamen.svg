@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#3d2010"/>
+      <stop offset="60%" stop-color="#241508"/>
+      <stop offset="100%" stop-color="#140b04"/>
+    </radialGradient>
+    <radialGradient id="warmGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="skinLight" cx="40%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#f0c090"/>
+      <stop offset="100%" stop-color="#c87840"/>
+    </radialGradient>
+    <filter id="candleBlur"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="softBlur"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="cb"/><feMerge><feMergeNode in="cb"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="1000" fill="url(#bg)"/>
+
+  <!-- Warm ambient lighting -->
+  <ellipse cx="400" cy="400" rx="350" ry="350" fill="url(#warmGlow)" filter="url(#candleBlur)" opacity="0.7"/>
+
+  <!-- Bookshelf elements in background -->
+  <rect x="50" y="100" width="20" height="280" fill="#2a1506" opacity="0.5"/>
+  <rect x="75" y="130" width="18" height="250" fill="#3a1f08" opacity="0.5"/>
+  <rect x="98" y="110" width="22" height="270" fill="#221204" opacity="0.5"/>
+  <rect x="125" y="140" width="16" height="240" fill="#311a07" opacity="0.4"/>
+  <rect x="660" y="100" width="20" height="280" fill="#2a1506" opacity="0.5"/>
+  <rect x="685" y="130" width="18" height="250" fill="#3a1f08" opacity="0.5"/>
+  <rect x="708" y="110" width="22" height="270" fill="#221204" opacity="0.5"/>
+
+  <!-- Candle light source (top) -->
+  <ellipse cx="400" cy="280" rx="60" ry="40" fill="#ffcc44" opacity="0.15" filter="url(#candleBlur)"/>
+
+  <!-- Silhouette of woman (stylized) -->
+  <!-- Hair -->
+  <ellipse cx="400" cy="280" rx="130" ry="140" fill="#1a0a02"/>
+  <!-- Face -->
+  <ellipse cx="400" cy="290" rx="90" ry="105" fill="url(#skinLight)"/>
+  <!-- Hair sides falling down -->
+  <ellipse cx="310" cy="400" rx="50" ry="120" fill="#1a0a02"/>
+  <ellipse cx="490" cy="400" rx="50" ry="120" fill="#1a0a02"/>
+  <!-- Neck -->
+  <rect x="370" y="385" width="60" height="60" fill="url(#skinLight)" rx="10"/>
+  <!-- Shoulders / body -->
+  <ellipse cx="400" cy="540" rx="160" ry="100" fill="#2d1a0a"/>
+  <!-- Clothing -->
+  <ellipse cx="400" cy="620" rx="180" ry="160" fill="#331e0c"/>
+
+  <!-- Face details -->
+  <!-- Eyes -->
+  <ellipse cx="370" cy="275" rx="16" ry="10" fill="#1a0a02"/>
+  <ellipse cx="430" cy="275" rx="16" ry="10" fill="#1a0a02"/>
+  <circle cx="373" cy="274" r="6" fill="#2a1506"/>
+  <circle cx="433" cy="274" r="6" fill="#2a1506"/>
+  <circle cx="375" cy="272" r="2" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="435" cy="272" r="2" fill="rgba(255,255,255,0.3)"/>
+  <!-- Eyebrows -->
+  <path d="M358 262 Q371 256 385 260" stroke="#1a0a02" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M415 260 Q428 256 442 262" stroke="#1a0a02" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Nose (subtle) -->
+  <path d="M400 290 Q394 308 398 315 Q403 320 406 315 Q410 308 400 290" fill="#c87040" opacity="0.5"/>
+  <!-- Smile -->
+  <path d="M383 335 Q400 348 417 335" stroke="#8b4020" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Tarot card in hand -->
+  <g transform="translate(245, 480) rotate(-8)">
+    <rect x="0" y="0" width="65" height="105" rx="4" fill="#2a1a08" stroke="#D4AF37" stroke-width="1.5"/>
+    <rect x="4" y="4" width="57" height="97" rx="3" fill="#1a0f04"/>
+    <polygon points="32,20 36,32 48,32 39,40 42,52 32,44 22,52 25,40 16,32 28,32" fill="#D4AF37" opacity="0.9"/>
+    <text x="32" y="78" font-family="serif" font-size="8" fill="#D4AF37" text-anchor="middle" opacity="0.8">THE STAR</text>
+  </g>
+
+  <!-- Golden jewelry details -->
+  <ellipse cx="400" cy="405" cx2="400" rx="40" ry="4" fill="#D4AF37" opacity="0.5"/>
+  <!-- Necklace -->
+  <path d="M360 405 Q400 425 440 405" stroke="#D4AF37" stroke-width="2" fill="none" opacity="0.6"/>
+  <circle cx="400" cy="422" r="5" fill="#D4AF37" opacity="0.7"/>
+
+  <!-- Candlelight effect on face -->
+  <ellipse cx="400" cy="310" rx="100" ry="120" fill="#ffaa33" opacity="0.06"/>
+
+  <!-- Candle below frame -->
+  <rect x="385" y="890" width="30" height="90" fill="#e8d5a0" rx="2"/>
+  <ellipse cx="400" cy="888" rx="15" ry="20" fill="#D4AF37" opacity="0.9" filter="url(#softBlur)"/>
+  <ellipse cx="400" cy="880" rx="8" ry="16" fill="#ffeeaa" opacity="0.8"/>
+
+  <!-- Overall warm overlay -->
+  <rect width="800" height="1000" fill="rgba(180,80,0,0.03)"/>
+
+  <!-- Bottom text area -->
+  <text x="400" y="820" font-family="Georgia, serif" font-size="22" fill="#D4AF37" text-anchor="middle" opacity="0.75" filter="url(#glow)">Mamen</text>
+  <text x="400" y="848" font-family="Georgia, serif" font-size="13" fill="#c8a830" text-anchor="middle" opacity="0.55">Tarot &amp; Conexión Sensorial</text>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#2a1a0a"/>
+      <stop offset="60%" stop-color="#1a0f05"/>
+      <stop offset="100%" stop-color="#0f0903"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff6600" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="blur2"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="cb"/><feMerge><feMergeNode in="cb"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- Ambient candlelight glow -->
+  <ellipse cx="400" cy="420" rx="180" ry="60" fill="url(#glow2)" filter="url(#blur1)"/>
+  <ellipse cx="400" cy="250" rx="300" ry="200" fill="url(#glow1)" filter="url(#blur1)" opacity="0.4"/>
+
+  <!-- Candle 1 (left) -->
+  <rect x="160" y="370" width="18" height="80" fill="#e8d5a0" rx="2"/>
+  <ellipse cx="169" cy="368" rx="9" ry="12" fill="#D4AF37" opacity="0.9" filter="url(#blur2)"/>
+  <ellipse cx="169" cy="362" rx="5" ry="10" fill="#ffeeaa" opacity="0.8"/>
+  <line x1="169" y1="368" x2="169" y2="355" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Candle 2 (right) -->
+  <rect x="622" y="360" width="18" height="90" fill="#e8d5a0" rx="2"/>
+  <ellipse cx="631" cy="358" rx="9" ry="12" fill="#D4AF37" opacity="0.9" filter="url(#blur2)"/>
+  <ellipse cx="631" cy="352" rx="5" ry="10" fill="#ffeeaa" opacity="0.8"/>
+  <line x1="631" y1="358" x2="631" y2="345" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Candle 3 (center back) -->
+  <rect x="388" y="300" width="14" height="100" fill="#e8d5a0" rx="2"/>
+  <ellipse cx="395" cy="298" rx="7" ry="10" fill="#D4AF37" opacity="0.9" filter="url(#blur2)"/>
+  <ellipse cx="395" cy="292" rx="4" ry="8" fill="#ffeeaa" opacity="0.8"/>
+  <line x1="395" y1="298" x2="395" y2="286" stroke="#333" stroke-width="1.5"/>
+
+  <!-- Table surface -->
+  <ellipse cx="400" cy="440" rx="370" ry="70" fill="#1e110600" />
+  <rect x="0" y="420" width="800" height="80" fill="#1a0d06" rx="0"/>
+
+  <!-- Tarot Cards -->
+  <!-- Card 1 (left, tilted) -->
+  <g transform="translate(220,260) rotate(-18)">
+    <rect x="0" y="0" width="90" height="145" rx="6" fill="#2a1a08" stroke="#D4AF37" stroke-width="1.5"/>
+    <rect x="6" y="6" width="78" height="133" rx="4" fill="#1a0f04"/>
+    <!-- Star pattern -->
+    <polygon points="45,30 49,42 62,42 52,50 56,62 45,54 34,62 38,50 28,42 41,42" fill="#D4AF37" opacity="0.9"/>
+    <text x="45" y="100" font-family="serif" font-size="11" fill="#D4AF37" text-anchor="middle" opacity="0.85">THE STAR</text>
+    <line x1="20" y1="110" x2="70" y2="110" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+    <text x="45" y="124" font-family="serif" font-size="9" fill="#c8a830" text-anchor="middle" opacity="0.7">XVII</text>
+  </g>
+
+  <!-- Card 2 (center, slightly tilted) -->
+  <g transform="translate(310,230) rotate(-5)">
+    <rect x="0" y="0" width="90" height="145" rx="6" fill="#2a1a08" stroke="#D4AF37" stroke-width="2"/>
+    <rect x="6" y="6" width="78" height="133" rx="4" fill="#1a0f04"/>
+    <!-- Moon pattern -->
+    <path d="M 45 28 Q 62 35 62 55 Q 62 72 45 78 Q 55 72 55 55 Q 55 38 45 28 Z" fill="#D4AF37" opacity="0.9"/>
+    <circle cx="45" cy="53" r="3" fill="#D4AF37" opacity="0.7"/>
+    <text x="45" y="100" font-family="serif" font-size="11" fill="#D4AF37" text-anchor="middle" opacity="0.85">THE MOON</text>
+    <line x1="20" y1="110" x2="70" y2="110" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+    <text x="45" y="124" font-family="serif" font-size="9" fill="#c8a830" text-anchor="middle" opacity="0.7">XVIII</text>
+  </g>
+
+  <!-- Card 3 (right, tilted other way) -->
+  <g transform="translate(400,240) rotate(12)">
+    <rect x="0" y="0" width="90" height="145" rx="6" fill="#2a1a08" stroke="#D4AF37" stroke-width="1.5"/>
+    <rect x="6" y="6" width="78" height="133" rx="4" fill="#1a0f04"/>
+    <!-- Sun pattern -->
+    <circle cx="45" cy="53" r="18" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.9"/>
+    <circle cx="45" cy="53" r="8" fill="#D4AF37" opacity="0.9"/>
+    <line x1="45" y1="28" x2="45" y2="22" stroke="#D4AF37" stroke-width="2" opacity="0.8"/>
+    <line x1="45" y1="78" x2="45" y2="84" stroke="#D4AF37" stroke-width="2" opacity="0.8"/>
+    <line x1="20" y1="53" x2="14" y2="53" stroke="#D4AF37" stroke-width="2" opacity="0.8"/>
+    <line x1="70" y1="53" x2="76" y2="53" stroke="#D4AF37" stroke-width="2" opacity="0.8"/>
+    <text x="45" y="100" font-family="serif" font-size="11" fill="#D4AF37" text-anchor="middle" opacity="0.85">THE SUN</text>
+    <line x1="20" y1="110" x2="70" y2="110" stroke="#D4AF37" stroke-width="0.5" opacity="0.5"/>
+    <text x="45" y="124" font-family="serif" font-size="9" fill="#c8a830" text-anchor="middle" opacity="0.7">XIX</text>
+  </g>
+
+  <!-- Small crystals -->
+  <polygon points="200,430 210,400 220,430" fill="#9b59b6" opacity="0.4"/>
+  <polygon points="570,440 578,415 586,440" fill="#8e44ad" opacity="0.35"/>
+
+  <!-- Overlay warmth -->
+  <rect width="800" height="500" fill="rgba(180,80,0,0.04)"/>
+
+  <!-- Text overlay -->
+  <text x="400" y="180" font-family="Georgia, serif" font-size="26" fill="#D4AF37" text-anchor="middle" opacity="0.85" filter="url(#glow)">Lectura de Tarot</text>
+  <text x="400" y="210" font-family="Georgia, serif" font-size="14" fill="#c8a830" text-anchor="middle" opacity="0.6">La sabiduría de las cartas</text>
+</svg>

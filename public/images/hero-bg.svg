@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#2a1506"/>
+      <stop offset="50%" stop-color="#1a0d04"/>
+      <stop offset="100%" stop-color="#0d0602"/>
+    </radialGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#ff6600" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ff6600" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="candleG" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffdd88" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ff8800" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bigBlur"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="medBlur"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="smallBlur"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="cb"/><feMerge><feMergeNode in="cb"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+
+  <!-- Ambient warmth glows -->
+  <ellipse cx="960" cy="800" rx="600" ry="300" fill="url(#glow2)" filter="url(#bigBlur)"/>
+  <ellipse cx="960" cy="500" rx="500" ry="400" fill="url(#glow1)" filter="url(#bigBlur)" opacity="0.5"/>
+
+  <!-- Stars -->
+  <circle cx="200" cy="80" r="2" fill="white" opacity="0.4"/>
+  <circle cx="400" cy="120" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="800" cy="60" r="2" fill="white" opacity="0.3"/>
+  <circle cx="1200" cy="90" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="1600" cy="50" r="2" fill="white" opacity="0.5"/>
+  <circle cx="1800" cy="150" r="1.5" fill="white" opacity="0.3"/>
+  <circle cx="100" cy="300" r="1.5" fill="white" opacity="0.3"/>
+  <circle cx="1850" cy="400" r="2" fill="white" opacity="0.4"/>
+
+  <!-- Table surface -->
+  <ellipse cx="960" cy="900" rx="900" ry="120" fill="#0f0703"/>
+  <rect x="0" y="920" width="1920" height="160" fill="#0a0502"/>
+
+  <!-- Large Candle (center back) -->
+  <rect x="938" y="620" width="44" height="260" fill="#e8d5a0" rx="3"/>
+  <ellipse cx="960" cy="618" rx="22" ry="30" fill="url(#candleG)" filter="url(#medBlur)"/>
+  <ellipse cx="960" cy="608" rx="12" ry="22" fill="#ffeeaa" opacity="0.9"/>
+  <line x1="960" y1="618" x2="960" y2="598" stroke="#444" stroke-width="2"/>
+  <!-- Candle wax drips -->
+  <path d="M938 680 Q933 690 935 700" stroke="#d4c080" stroke-width="3" fill="none" opacity="0.5"/>
+
+  <!-- Medium Candle (left) -->
+  <rect x="500" y="700" width="32" height="200" fill="#e8d5a0" rx="3"/>
+  <ellipse cx="516" cy="698" rx="16" ry="22" fill="url(#candleG)" filter="url(#medBlur)"/>
+  <ellipse cx="516" cy="690" rx="9" ry="16" fill="#ffeeaa" opacity="0.9"/>
+  <line x1="516" y1="698" x2="516" y2="680" stroke="#444" stroke-width="2"/>
+
+  <!-- Medium Candle (right) -->
+  <rect x="1388" y="720" width="32" height="180" fill="#e8d5a0" rx="3"/>
+  <ellipse cx="1404" cy="718" rx="16" ry="22" fill="url(#candleG)" filter="url(#medBlur)"/>
+  <ellipse cx="1404" cy="710" rx="9" ry="16" fill="#ffeeaa" opacity="0.9"/>
+  <line x1="1404" y1="718" x2="1404" y2="700" stroke="#444" stroke-width="2"/>
+
+  <!-- Small candles -->
+  <rect x="340" y="800" width="22" height="120" fill="#e8d5a0" rx="2"/>
+  <ellipse cx="351" cy="798" rx="11" ry="16" fill="url(#candleG)" filter="url(#smallBlur)"/>
+  <ellipse cx="351" cy="790" rx="6" ry="11" fill="#ffeeaa" opacity="0.85"/>
+
+  <rect x="1570" y="810" width="22" height="110" fill="#e8d5a0" rx="2"/>
+  <ellipse cx="1581" cy="808" rx="11" ry="16" fill="url(#candleG)" filter="url(#smallBlur)"/>
+  <ellipse cx="1581" cy="800" rx="6" ry="11" fill="#ffeeaa" opacity="0.85"/>
+
+  <!-- Tarot Cards spread on table -->
+  <!-- Card 1 -->
+  <g transform="translate(700,680) rotate(-15)">
+    <rect x="0" y="0" width="120" height="195" rx="8" fill="#2a1a08" stroke="#D4AF37" stroke-width="2"/>
+    <rect x="7" y="7" width="106" height="181" rx="6" fill="#1a0f04"/>
+    <polygon points="60,35 66,55 88,55 72,68 78,88 60,75 42,88 48,68 32,55 54,55" fill="#D4AF37" opacity="0.9"/>
+    <text x="60" y="140" font-family="serif" font-size="15" fill="#D4AF37" text-anchor="middle">THE STAR</text>
+    <text x="60" y="162" font-family="serif" font-size="12" fill="#c8a830" text-anchor="middle">XVII</text>
+  </g>
+  <!-- Card 2 (center main) -->
+  <g transform="translate(840,640) rotate(-3)">
+    <rect x="0" y="0" width="130" height="210" rx="8" fill="#2a1a08" stroke="#D4AF37" stroke-width="2.5"/>
+    <rect x="8" y="8" width="114" height="194" rx="6" fill="#180e03"/>
+    <circle cx="65" cy="80" r="32" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.9"/>
+    <circle cx="65" cy="80" r="14" fill="#D4AF37" opacity="0.9"/>
+    <line x1="65" y1="42" x2="65" y2="32" stroke="#D4AF37" stroke-width="2.5"/>
+    <line x1="65" y1="118" x2="65" y2="128" stroke="#D4AF37" stroke-width="2.5"/>
+    <line x1="27" y1="80" x2="17" y2="80" stroke="#D4AF37" stroke-width="2.5"/>
+    <line x1="103" y1="80" x2="113" y2="80" stroke="#D4AF37" stroke-width="2.5"/>
+    <text x="65" y="160" font-family="serif" font-size="16" fill="#D4AF37" text-anchor="middle">THE SUN</text>
+    <text x="65" y="182" font-family="serif" font-size="12" fill="#c8a830" text-anchor="middle">XIX</text>
+  </g>
+  <!-- Card 3 -->
+  <g transform="translate(980,660) rotate(10)">
+    <rect x="0" y="0" width="120" height="195" rx="8" fill="#2a1a08" stroke="#D4AF37" stroke-width="2"/>
+    <rect x="7" y="7" width="106" height="181" rx="6" fill="#1a0f04"/>
+    <path d="M60 35 Q77 60 77 80 Q77 100 60 115 Q70 100 70 80 Q70 60 60 35 Z" fill="#D4AF37" opacity="0.9"/>
+    <text x="60" y="140" font-family="serif" font-size="15" fill="#D4AF37" text-anchor="middle">THE MOON</text>
+    <text x="60" y="162" font-family="serif" font-size="12" fill="#c8a830" text-anchor="middle">XVIII</text>
+  </g>
+  <!-- Card 4 (right) -->
+  <g transform="translate(1110,690) rotate(18)">
+    <rect x="0" y="0" width="110" height="178" rx="8" fill="#2a1a08" stroke="#D4AF37" stroke-width="1.5"/>
+    <rect x="6" y="6" width="98" height="166" rx="6" fill="#1a0f04"/>
+    <!-- Back pattern -->
+    <rect x="12" y="12" width="86" height="154" rx="4" fill="none" stroke="#D4AF37" stroke-width="0.5" opacity="0.4"/>
+    <line x1="12" y1="89" x2="98" y2="89" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+    <line x1="55" y1="12" x2="55" y2="166" stroke="#D4AF37" stroke-width="0.5" opacity="0.3"/>
+  </g>
+
+  <!-- Crystals on table -->
+  <polygon points="650,870 665,820 680,870" fill="#9b59b6" opacity="0.4"/>
+  <polygon points="1240,880 1252,840 1264,880" fill="#8e44ad" opacity="0.35"/>
+  <polygon points="1280,875 1290,848 1300,875" fill="#7a3d9a" opacity="0.3"/>
+
+  <!-- Rose quartz -->
+  <ellipse cx="780" cy="880" rx="25" ry="12" fill="#ffaacc" opacity="0.25"/>
+  <ellipse cx="1140" cy="888" rx="20" ry="10" fill="#ffaacc" opacity="0.2"/>
+
+  <!-- Smoke particles from candles -->
+  <circle cx="960" cy="570" r="4" fill="rgba(200,200,200,0.06)"/>
+  <circle cx="958" cy="540" r="6" fill="rgba(200,200,200,0.04)"/>
+  <circle cx="963" cy="510" r="8" fill="rgba(200,200,200,0.03)"/>
+
+  <!-- Overall warm tint -->
+  <rect width="1920" height="1080" fill="rgba(120,50,0,0.04)"/>
+</svg>

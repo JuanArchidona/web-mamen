@@ -1,0 +1,44 @@
+.trust-banner {
+    background: var(--col-white);
+    padding: 48px 0;
+    border-bottom: 1px solid #eeece6;
+    border-top: 1px solid #eeece6;
+}
+
+.trust-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    color: var(--col-text-light);
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 20px 16px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.trust-item:hover {
+    background: rgba(212, 175, 55, 0.06);
+    color: var(--col-text);
+}
+
+.trust-item i {
+    color: var(--col-gold);
+    font-size: 1.7rem;
+    transition: var(--transition);
+}
+
+.trust-item:hover i {
+    transform: scale(1.15);
+}
