@@ -13,8 +13,8 @@ export default function Footer() {
                             <a href="https://wa.me/34656320303" className="footer-contact-item">
                                 <i className="fab fa-whatsapp" /> 656 32 03 03
                             </a>
-                            <a href="mailto:msgmamen1@gmail.com" className="footer-contact-item">
-                                <i className="fas fa-envelope" /> msgmamen1@gmail.com
+                            <a href="https://g.page/r/CcUnFPV24bWmEBI/review" target="_blank" rel="noopener noreferrer" className="footer-contact-item">
+                                <i className="fab fa-google" /> Déjanos tu reseña
                             </a>
                             <span className="footer-contact-item">
                                 <i className="fas fa-map-marker-alt" /> Torrejón de Velasco, España
