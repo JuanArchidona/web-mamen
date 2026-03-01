@@ -59,3 +59,20 @@
     color: var(--col-gold);
     font-size: 0.9rem;
 }
+
+@media (max-width: 480px) {
+    .nav-flex {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .header-phone {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+        white-space: nowrap;
+        gap: 6px;
+    }
+}
